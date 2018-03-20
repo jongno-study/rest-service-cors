@@ -9,17 +9,24 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<ul>
+    <li id="id"></li>
+    <li id="quote"></li>
+</ul>
 
 <script type="application/javascript">
+
+    var welId = $('#id');
+    var welQuote = $('#quote');
+
     $(document).ready(function () {
         console.log("document ready !!");
 
         $.ajax({
-            method: "get",
-            url: "http://localhost:8080/user",
-            dataType: "json",
+            url: "http://localhost:8080/quote",
             success: function (response) {
-                console.log(response);
+                welId.html(response.value.id);
+                welQuote.html(response.value.quote);
             }
         });
     });
