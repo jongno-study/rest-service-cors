@@ -12,6 +12,7 @@
 		<module>library</module>
 		<module>application</module>
 		<module>consuming-rest</module>
+		<module>rest-service-cors</module>
 	</modules>
 
 </project>
